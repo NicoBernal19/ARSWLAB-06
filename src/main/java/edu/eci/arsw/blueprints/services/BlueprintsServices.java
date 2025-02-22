@@ -8,6 +8,8 @@ import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import edu.eci.arsw.blueprints.persistence.impl.Tuple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -37,7 +39,7 @@ public class BlueprintsServices {
         bpp.saveBlueprint(bp);
     }
 
-    public Set<Blueprint> getAllBlueprints(){
+    public Set<Blueprint> getAllBlueprints() {
         Set<Blueprint> allBlueprints = bpp.getAllBlueprints();
         Set<Blueprint> filteredBlueprints = new HashSet<>();
 
@@ -48,24 +50,22 @@ public class BlueprintsServices {
     }
 
     /**
-     *
      * @param author blueprint's author
-     * @param name blueprint's name
+     * @param name   blueprint's name
      * @return the blueprint of the given name created by the given author
      * @throws BlueprintNotFoundException if there is no such blueprint
      */
-    public Blueprint getBlueprint(String author,String name) throws BlueprintNotFoundException{
+    public Blueprint getBlueprint(String author, String name) throws BlueprintNotFoundException {
         Blueprint blueprint = bpp.getBlueprint(author, name);
         return bpFilter.filter(blueprint);
     }
 
     /**
-     *
      * @param author blueprint's author
      * @return all the blueprints of the given author
      * @throws BlueprintNotFoundException if the given author doesn't exist
      */
-    public Set<Blueprint> getBlueprintsByAuthor(String author) throws BlueprintNotFoundException{
+    public Set<Blueprint> getBlueprintsByAuthor(String author) throws BlueprintNotFoundException {
         Set<Blueprint> authorBlueprints = bpp.getBlueprintsByAuthor(author);
         Set<Blueprint> filteredBlueprints = new HashSet<>();
         for (Blueprint blueprint : authorBlueprints) {
@@ -74,4 +74,7 @@ public class BlueprintsServices {
         return filteredBlueprints;
     }
 
+    public void updateBlueprint(Blueprint bp) throws BlueprintNotFoundException {
+        bpp.updateBlueprint(bp);
+    }
 }

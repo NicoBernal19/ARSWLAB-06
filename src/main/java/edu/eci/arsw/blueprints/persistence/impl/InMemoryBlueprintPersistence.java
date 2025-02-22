@@ -99,4 +99,12 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
     public Set<Blueprint> getAllBlueprints() {
         return new HashSet<>(blueprints.values());
     }
+
+    @Override
+    public void updateBlueprint(Blueprint bp) throws BlueprintNotFoundException {
+        if (!blueprints.containsKey(new Tuple<>(bp.getAuthor(), bp.getName()))) {
+            throw new BlueprintNotFoundException("The blueprint doesn't exist: " + bp);
+        }
+        blueprints.put(new Tuple<>(bp.getAuthor(), bp.getName()), bp);
+    }
 }
