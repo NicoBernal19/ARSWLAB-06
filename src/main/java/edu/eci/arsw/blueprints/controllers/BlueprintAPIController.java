@@ -46,5 +46,16 @@ public class BlueprintAPIController {
             return new ResponseEntity<>("No se encontraron planos del autor: " + author, HttpStatus.NOT_FOUND);
         }
     }
+
+    public ResponseEntity<?> getBlueprint(@PathVariable String author, @PathVariable String bpname) {
+        try {
+            Blueprint blueprint = blueprintsServices.getBlueprint(author, bpname);
+            return new ResponseEntity<>(blueprint, HttpStatus.ACCEPTED);
+        } catch (BlueprintNotFoundException ex) {
+            Logger.getLogger(BlueprintAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("No se encontró el plano: " + bpname + " del autor: " + author,
+                    HttpStatus.NOT_FOUND);
+        }
+    }
 }
 
