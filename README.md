@@ -2,7 +2,9 @@
 
 ### Arquitecturas de Software
 
+### **Realizado por:**
 
+- Juan Pablo Daza Pereira
 
 #### API REST para la gestión de planos.
 
