@@ -77,7 +77,19 @@ Trayendo un autor no existente:
 
 6. Modifique el controlador para que ahora, acepte peticiones GET al recurso /blueprints/{author}/{bpname}, el cual retorne usando una representación jSON sólo UN plano, en este caso el realizado por {author} y cuyo nombre sea {bpname}. De nuevo, si no existe dicho autor, se debe responder con el código de error HTTP 404. 
 
+**RESPUESTA:**
 
+Trayendo los plano de Juan:
+
+![](img/img_3.png)
+
+Trayendo los plano de Fabio:
+
+![](img/img_4.png)
+
+Trayendo planos inexistentes:
+
+![](img/img_5.png)
 
 ### Parte II
 
