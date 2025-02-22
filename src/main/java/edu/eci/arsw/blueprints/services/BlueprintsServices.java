@@ -68,6 +68,9 @@ public class BlueprintsServices {
     public Set<Blueprint> getBlueprintsByAuthor(String author) throws BlueprintNotFoundException{
         Set<Blueprint> authorBlueprints = bpp.getBlueprintsByAuthor(author);
         Set<Blueprint> filteredBlueprints = new HashSet<>();
+        for (Blueprint blueprint : authorBlueprints) {
+            filteredBlueprints.add(bpFilter.filter(blueprint));
+        }
         return filteredBlueprints;
     }
 
