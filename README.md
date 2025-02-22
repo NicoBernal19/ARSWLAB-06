@@ -141,6 +141,15 @@ Verificamos su creación:
 
 4. Agregue soporte al verbo PUT para los recursos de la forma '/blueprints/{author}/{bpname}', de manera que sea posible actualizar un plano determinado.
 
+**RESPUESTA:**
+
+Actualizamos los puntos del plano:
+
+![](img/img_9.png)
+
+Comprobamos los cambios:
+
+![](img/img_10.png)
 
 ### Parte III
 
