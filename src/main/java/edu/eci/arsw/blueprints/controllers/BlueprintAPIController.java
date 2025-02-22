@@ -47,6 +47,7 @@ public class BlueprintAPIController {
         }
     }
 
+    @RequestMapping(value = "/{author}/{bpname}", method = RequestMethod.GET)
     public ResponseEntity<?> getBlueprint(@PathVariable String author, @PathVariable String bpname) {
         try {
             Blueprint blueprint = blueprintsServices.getBlueprint(author, bpname);
