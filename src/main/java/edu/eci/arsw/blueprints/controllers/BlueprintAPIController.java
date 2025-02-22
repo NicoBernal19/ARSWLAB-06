@@ -68,5 +68,26 @@ public class BlueprintAPIController {
             return new ResponseEntity<>("El plano ya existe", HttpStatus.FORBIDDEN);
         }
     }
+
+    @RequestMapping(value = "/{author}/{bpname}", method = RequestMethod.PUT)
+    public ResponseEntity<?> updateBlueprint(@PathVariable String author,
+                                             @PathVariable String bpname,
+                                             @RequestBody Blueprint blueprint) {
+        try {
+            // Verificar que el autor y nombre coincidan con la URL
+            if (!blueprint.getAuthor().equals(author) || !blueprint.getName().equals(bpname)) {
+                return new ResponseEntity<>("El autor y nombre del plano deben coincidir con la URL",
+                        HttpStatus.BAD_REQUEST);
+            }
+
+            // Actualizar el blueprint
+            blueprintsServices.updateBlueprint(blueprint);
+            return new ResponseEntity<>(HttpStatus.OK);
+
+        } catch (BlueprintNotFoundException ex) {
+            return new ResponseEntity<>("No se encontró el plano a actualizar",
+                    HttpStatus.NOT_FOUND);
+        }
+    }
 }
 
