@@ -5,6 +5,7 @@
 ### **Realizado por:**
 
 - Juan Pablo Daza Pereira
+- Nicolas Bernal Fuquene
 
 #### API REST para la gestión de planos.
 
@@ -18,7 +19,6 @@ Donde se definió que:
 * El componente BlueprintsRESTAPI debe resolver los servicios de su interfaz a través de un componente de servicios, el cual -a su vez- estará asociado con un componente que provea el esquema de persistencia. Es decir, se quiere un bajo acoplamiento entre el API, la implementación de los servicios, y el esquema de persistencia usado por los mismos.
 
 Del anterior diagrama de componentes (de alto nivel), se desprendió el siguiente diseño detallado, cuando se decidió que el API estará implementado usando el esquema de inyección de dependencias de Spring (el cual requiere aplicar el principio de Inversión de Dependencias), la extensión SpringMVC para definir los servicios REST, y SpringBoot para la configurar la aplicación:
-
 
 ![](img/ClassDiagram.png)
 
@@ -112,22 +112,14 @@ Trayendo planos inexistentes:
 	```	
 
 
-2.  Para probar que el recurso ‘planos’ acepta e interpreta
-    correctamente las peticiones POST, use el comando curl de Unix. Este
-    comando tiene como parámetro el tipo de contenido manejado (en este
-    caso jSON), y el ‘cuerpo del mensaje’ que irá con la petición, lo
-    cual en este caso debe ser un documento jSON equivalente a la clase
-    Cliente (donde en lugar de {ObjetoJSON}, se usará un objeto jSON correspondiente a una nueva orden:
+2.  Para probar que el recurso ‘planos’ acepta e interpreta correctamente las peticiones POST, use el comando curl de Unix. Este comando tiene como parámetro el tipo de contenido manejado (en este caso jSON), y el ‘cuerpo del mensaje’ que irá con la petición, lo cual en este caso debe ser un documento jSON equivalente a la clase Cliente (donde en lugar de {ObjetoJSON}, se usará un objeto jSON correspondiente a una nueva orden:
 
 	```	
 	$ curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://URL_del_recurso_ordenes -d '{ObjetoJSON}'
 	```	
-
 	Con lo anterior, registre un nuevo plano (para 'diseñar' un objeto jSON, puede usar [esta herramienta](http://www.jsoneditoronline.org/)):
 	
-
 	Nota: puede basarse en el formato jSON mostrado en el navegador al consultar una orden con el método GET.
-
 
 **RESPUESTA:**
 
