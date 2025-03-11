@@ -4,47 +4,51 @@
     <title>Blueprints</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/apimock.js"></script>
-    <script src="js/app.js"></script>
-    <link rel="stylesheet"
-          href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="/js/apimock.js"></script>
+    <script src="/js/app.js"></script>
 </head>
 <body>
-<h1>Blueprints Manager</h1>
+<div class="container">
+    <h1 class="text-center">Blueprints</h1>
+    <div class="row">
+        <div class="col offset">
+            <div class="input-group">
+                <input type="text" id="authorNameInput" class="form-control" placeholder="Nombre del autor">
+                <button id="fetchBlueprintsButton" class="btn btn-primary">Get Blueprints</button>
+            </div>
+        </div>
+    </div>
 
-<div>
-    <label for="author">Autor:</label>
-    <input type="text" id="author" placeholder="Ingrese el nombre del autor">
-    <button id="getBlueprints">Get Blueprints</button>
-</div>
+    <div class="row">
+        <div class="col-md-10 text-left">
+            <h2>Autor: <span id="currentAuthorDisplay">Ninguno</span></h2>
+        </div>
+    </div>
 
-<div>
-    <h2>Autor seleccionado:</h2>
-    <div id="selectedAuthor"></div>
-</div>
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Nombre del Plano</th>
+                    <th>Puntos</th>
+                </tr>
+                </thead>
+                <tbody id="blueprintTableBody">
 
-<div>
-    <h2>Listado de Planos:</h2>
-    <table id="blueprintsTable" border="1">
-        <thead>
-        <tr>
-            <th>Nombre del Plano</th>
-            <th>Número de Puntos</th>
-        </tr>
-        </thead>
-        <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-        </tbody>
-    </table>
-</div>
-
-
-<div>
-    <h2>Total de puntos:</h2>
-    <div id="totalPoints"></div>
+    <div class="row">
+        <div class="col-md-10 text-center">
+            <h4>Total de puntos: <span id="totalPointsDisplay">0</span></h4>
+        </div>
+    </div>
 </div>
 </body>
 </html>
