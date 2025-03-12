@@ -5,17 +5,11 @@ apimock=(function(){
     var mockdata=[];
 
     mockdata["johnconnor"]=
-        [{author:"johnconnor","points":[{"x":150,"y":120},{"x":215,"y":115}],"name":"house"},
-        {author:"johnconnor","points":[{"x":340,"y":240},{"x":15,"y":215}],"name":"gear"},
-        {author:"johnconnor","points":[{"x":400,"y":270},{"x":150,"y":215}],"name":"kitchen"},
-        {author:"johnconnor","points":[{"x":250,"y":175},{"x":150,"y":200}],"name":"bedroom"},
-        {author:"johnconnor","points":[{"x":440,"y":340},{"x":155,"y":250}],"name":"gear"}];
+        [{author:"johnconnor","points":[{ "x": 200, "y": 50},{ "x": 100, "y": 250},{ "x": 300, "y": 250},{ "x": 200, "y": 50}],"name":"triangle"},
+        {author:"johnconnor","points":[{ "x": 200, "y": 50 },{ "x": 300, "y": 125 },{ "x": 275, "y": 225 },{ "x": 125, "y": 225 },{ "x": 100, "y": 125 },{ "x": 200, "y": 50 }],"name":"pentagon"}];
     mockdata["maryweyland"]=
-        [{author:"maryweyland","points":[{"x":140,"y":140},{"x":115,"y":115}],"name":"house2"},
-        {author:"maryweyland","points":[{"x":140,"y":140},{"x":115,"y":115}],"name":"gear2"},
-        {author:"maryweyland","points":[{"x":400,"y":270},{"x":150,"y":215}],"name":"kitchen2"},
-        {author:"maryweyland","points":[{"x":250,"y":175},{"x":150,"y":200}],"name":"bedroom2"},
-        {author:"maryweyland","points":[{"x":440,"y":340},{"x":155,"y":250}],"name":"gear2"}];
+        [{author:"maryweyland","points":[{ "x": 200, "y": 50 },{ "x": 100, "y": 250 },{ "x": 300, "y": 250 },{ "x": 200, "y": 50 }],"name":"triangulo"},
+        {author:"maryweyland","points":[{ "x": 100, "y": 200 },{ "x": 300, "y": 200 },{ "x": 300, "y": 100 },{ "x": 250, "y": 50 },{ "x": 200, "y": 50 },{ "x": 150, "y": 50 },{ "x": 100, "y": 100 },{ "x": 100, "y": 200 }],"name":"casa"}];
 
 
     return {

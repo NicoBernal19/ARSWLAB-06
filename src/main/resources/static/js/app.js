@@ -1,6 +1,6 @@
 // Cambiar entre apimock y apiclient
-// const api = apimock; // Usar apimock
- api = apiclient; // Usar apiclient
+//const api = apimock; // Usar apimock
+const api = apiclient; // Usar apiclient
 
 const BlueprintManager = (function () {
 
@@ -22,7 +22,7 @@ const BlueprintManager = (function () {
                     <td>${bp.points.length}</td>
                     <td>
                         <button class="btn btn-sm btn-info draw-button" data-author="${currentAuthor}" data-blueprint="${bp.name}">
-                            Dibujar
+                            Open
                         </button>
                     </td>
                 </tr>
@@ -65,7 +65,7 @@ const BlueprintManager = (function () {
 
         loadBlueprints: function () {
             api.getBlueprintsByAuthor(currentAuthor, (data) => {
-                if (data.length > 0) {
+                if (data && data.length > 0) {
                     blueprints = data;
                     updateView(blueprints);
                 } else {
