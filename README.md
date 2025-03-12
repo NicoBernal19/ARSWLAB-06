@@ -1,5 +1,6 @@
 ### Escuela Colombiana de Ingeniería
 ### Arquiecturas de Software
+### Hecho por: Nicolas Bernal
 
 ## Construción de un cliente 'grueso' con un API REST, HTML5, Javascript y CSS3. Parte I.
 
@@ -125,6 +126,8 @@ Se uso postman para insertar nuevas peticiones POST para ver que apiclient esta 
 ![](img/5.png)
 
 13. Modifique el código de app.js de manera que sea posible cambiar entre el 'apimock' y el 'apiclient' con sólo una línea de código.
+
+![](img/9.png)
 
 14. Revise la [documentación y ejemplos de los estilos de Bootstrap](https://v4-alpha.getbootstrap.com/examples/) (ya incluidos en el ejercicio), agregue los elementos necesarios a la página para que sea más vistosa, y más cercana al mock dado al inicio del enunciado.
 
