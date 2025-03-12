@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 /**
  *
  * @author hcadavid
- * @author Juan Pablo Daza Pereira
+ * @author Nicolas Bernal
  */
 @RestController
 @RequestMapping(value = "/blueprints")

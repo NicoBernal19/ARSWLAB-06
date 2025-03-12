@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * @author Juan Pablo Daza Pereira
+ * @author Nicolas Bernal
  */
 @Component("subsamplingFilter")
 public class SubsamplingFilter implements BlueprintFilter {

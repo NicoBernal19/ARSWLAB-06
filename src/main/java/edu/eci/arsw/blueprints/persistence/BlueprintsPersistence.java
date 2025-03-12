@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  *
  * @author hcadavid
- * @author Juan Pablo Daza Pereira
+ * @author Nicolas Bernal
  */
 public interface BlueprintsPersistence {
 

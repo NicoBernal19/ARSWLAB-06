@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author hcadavid
- * @author Juan Pablo Daza Pereira
+ * @author Nicolas Bernal
  */
 @Service
 public class BlueprintsServices {
